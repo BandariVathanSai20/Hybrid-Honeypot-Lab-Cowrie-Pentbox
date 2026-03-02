@@ -32,34 +32,66 @@ This project focuses on capturing attacker activities such as:
 
 ## System Architecture
 
-Attacker (Kali Linux / External System)
-        ↓
-Network
-        ↓
-+-----------------------------------+
-| Kali Linux Honeypot VM            |
-|-----------------------------------|
-| Cowrie (SSH/Telnet - Port 2222)   |
-| Pentbox (Fake Services - Port 80) |
-+-----------------------------------+
-        ↓
-Log Collection (JSON / TXT)
-        ↓
-Log Analysis & Reporting
+```text
+                ┌───────────────────────────────┐
+                │   Attacker Machine            │
+                │ (Kali Linux / External Host)  │
+                └───────────────┬───────────────┘
+                                │
+                                ▼
+                        ┌───────────────┐
+                        │   Network     │
+                        └───────────────┘
+                                │
+                                ▼
+        ┌────────────────────────────────────────────┐
+        │        Kali Linux Honeypot VM              │
+        │--------------------------------------------│
+        │  🐧 Cowrie  (SSH/Telnet - Port 2222)      │
+        │  📡 Pentbox (Fake Services - Port 80)     │
+        └────────────────────────────────────────────┘
+                                │
+                                ▼
+                ┌───────────────────────────────┐
+                │  Log Collection (JSON / TXT)  │
+                └───────────────┬───────────────┘
+                                │
+                                ▼
+                ┌───────────────────────────────┐
+                │  Log Analysis & Reporting     │
+                └───────────────────────────────┘
+```
+
+### Explanation
+
+- Attacker performs scanning & brute-force
+- Honeypots capture activity
+- Logs stored in JSON & TXT
+- Logs analyzed for attack patterns
 
 ---
 
 ## Tools & Technologies Used
 
-| Tool               | Purpose                  |
-| VMware Workstation | Virtual Lab Environment  |
-| Kali Linux         | Honeypot Host OS         |
-| Cowrie             | SSH/Telnet Honeypot      |
-| Pentbox            | Port Honeypot            |
-| Nmap               | Port Scanning Simulation |
-| Hydra              | Brute-force Testing      |
-| Python 3           | Cowrie Runtime           |
-| Git                | Repository Management    |
+| Category | Tool | Purpose |
+|-----------|------|---------|
+| Virtualization | VMware Workstation | Create isolated lab environment |
+| Operating System | Kali Linux | Host honeypot services |
+| Honeypot (Medium Interaction) | Cowrie | Capture SSH/Telnet login attempts & commands |
+| Honeypot (Low Interaction) | Pentbox | Detect port scans & fake service interactions |
+| Attack Simulation | Nmap | Port scanning & reconnaissance testing |
+| Attack Simulation | Hydra | SSH brute-force testing |
+| Programming | Python 3 | Runtime for Cowrie |
+| Version Control | Git | Repository management |
+
+---
+
+### Ports Used
+
+| Service | Port | Purpose |
+|----------|------|----------|
+| SSH Honeypot | 2222 | Capture brute-force login attempts |
+| Fake HTTP Service | 80 | Trigger port scan detection |
 
 ---
 
@@ -72,6 +104,17 @@ Log Analysis & Reporting
 - JSON structured logging
 - Attack simulation using Nmap & SSH
 - Log analysis & reporting
+
+---
+
+## Technology Stack
+
+![Kali Linux](https://img.shields.io/badge/Kali-Linux-blue)
+![Python](https://img.shields.io/badge/Python-3.x-yellow)
+![VMware](https://img.shields.io/badge/VMware-Workstation-orange)
+![Cowrie](https://img.shields.io/badge/Cowrie-Honeypot-green)
+![Pentbox](https://img.shields.io/badge/Pentbox-Honeypot-red)
+![Nmap](https://img.shields.io/badge/Nmap-Scanner-lightgrey)
 
 ---
 
