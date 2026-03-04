@@ -167,14 +167,25 @@ Captured Data Includes:
 ## Repository Structure
 
 ```
-Hybrid-Honeypot-Lab-Cowrie-Pentbox/
+Hybrid-Honeypot-Lab-Cowrie-Pentbox
 │
-├── README.md
-├── setup/
-├── attack-simulation/
-├── logs-analysis/
-├── report/
-└── presentation/
+├── setup
+│   ├── cowrie-installation.md
+│   └── pentbox-installation.md
+│
+├── attack-simulation
+│   └── attack-tests.md
+│
+├── logs-analysis
+│   └── sample-log-analysis.md
+│
+├── screenshots
+│
+├── Hybrid_Honeypot_Lab_Report.pdf  
+│
+├── Honeypot_Implementation_Presentation.pptx 
+│
+└── README.md
 ```
 
 ---
@@ -214,6 +225,16 @@ Hybrid-Honeypot-Lab-Cowrie-Pentbox/
 ![Attack Logs 1](screenshots/attack_logs1.png)
 
 ![Attack Logs 2](screenshots/attack_logs2.png)
+
+---
+
+## Project Documentation
+
+ Full Project Report  
+[View Report](report/Hybrid_Honeypot_Lab_Report.pdf)
+
+ Project Presentation  
+[View Slides](presentation/Honeypot_Implementation_Presentation.pptx)
 
 ---
 
