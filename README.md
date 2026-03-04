@@ -178,6 +178,44 @@ Hybrid-Honeypot-Lab-Cowrie-Pentbox/
 ```
 
 ---
+## Project Screenshots
+
+### Environment Setup
+![Environment Setup](screenshots/environment_setup.png)
+
+---
+
+### Cowrie Deployment
+![Cowrie Deployment](screenshots/cowrie_deployment.png)
+
+---
+
+### Cowrie Deployment (Step 2)
+![Cowrie Deployment 2](screenshots/cowrie_deployment2.png)
+
+---
+
+### Cowrie Attack Simulation
+![Cowrie Attack](screenshots/cowrie_deployment_attack.png)
+
+---
+
+### Pentbox Deployment
+![Pentbox Deployment](screenshots/pentbox_deployment.png)
+
+---
+
+### Pentbox Attack Detection
+![Pentbox Attack](screenshots/pentbox_attack.png)
+
+---
+
+### Attack Logs
+![Attack Logs 1](screenshots/attack_logs1.png)
+
+![Attack Logs 2](screenshots/attack_logs2.png)
+
+---
 
 ## Disclaimer
 
